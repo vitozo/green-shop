@@ -6,8 +6,8 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -18,8 +18,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -35,16 +35,17 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'cera-pro';
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
+a:not {
   text-decoration-skip-ink: auto;
 }
 
@@ -75,4 +76,51 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+
+@font-face {
+  font-family: 'cera-pro';
+  src: url('./fonts/cerapro-black-webfont.woff2') format('woff2'),
+  url('./fonts/cerapro-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cera-pro';
+  src: url('./fonts/cerapro-bold-webfont.woff2') format('woff2'),
+  url('./fonts/cerapro-bold-webfont.woff') format('woff');
+  font-weight: bold; /*700*/
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cera-pro';
+  src: url('./fonts/cerapro-medium-webfont.woff2') format('woff2'),
+  url('./fonts/cerapro-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cera-pro';
+  src: url('./fonts/cerapro-light-webfont.woff2') format('woff2'),
+  url('./fonts/cerapro-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cera-pro';
+  src: url('./fonts/cerapro-regular-webfont.woff2') format('woff2'),
+  url('./fonts/cerapro-regular-webfont.woff') format('woff');
+  font-weight: normal; /*400*/
+  font-style: normal;
+
 }
