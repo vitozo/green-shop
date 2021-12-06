@@ -1,0 +1,84 @@
+.footer__content{
+    display: flex;
+    justify-content: space-around;
+    background: #FBFBFB;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.2);
+    padding: 33px 0 27px 0;
+}
+
+.footer__content__listText{
+    display: flex;
+}
+
+.footer__content__list{
+    margin-right: 166px;
+}
+
+.footer__content__list__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #3D3D3D;
+}
+
+.footer__content__list ul li a{
+    color: #3D3D3D;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footer__content__list ul li a:hover{
+    border-bottom: 1px solid rgba(70, 163, 88, 0.2);
+}
+
+.footer__content__listIcon__container{
+    display: flex;
+}
+
+.footer__content__listIcon__title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    padding: 0 0 20px 0;
+}
+
+
+.footer__content__listIcon__item{
+    border: 1px solid rgba(70, 163, 88, 0.2);
+    border-radius: 4px;
+    padding: 7px 11px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.footer__content__listIcon__item img{
+    width: 16px;
+    height: 16px;
+}
+
+.footer__content__listIcon__item:hover{
+    cursor: pointer;
+}
+
+.footer__content__listIcon__PaymentIcon{
+    color: #3D3D3D;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    margin-top: 33px;
+}
+
+.footer__content__listIcon__PaymentIcon__img{
+   margin-top: 13px;
+}
+
+.footer__content__listIcon__PaymentIcon__img:hover{
+    cursor: pointer;
+}
+
+.footer__copyright{
+    display: flex;
+    margin-top: 6px;
+    justify-content: center;
+}

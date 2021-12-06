@@ -38,7 +38,7 @@ body {
   font-family: 'cera-pro';
 }
 
-body{
+body {
   font-family: 'cera-pro', sens-serif;
   font-size: 16px;
   font-weight: normal;
@@ -55,6 +55,10 @@ ol {
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not {
   text-decoration-skip-ink: auto;
+}
+
+a{
+  text-decoration: none;
 }
 
 /* Упрощаем работу с изображениями */
