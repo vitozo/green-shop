@@ -5,7 +5,7 @@ import infoform2 from '../../images/content/infologo2.png';
 import infoform3 from '../../images/content/infologo3.png';
 
 
-const InfoForm = () => {
+const InfoForm: React.FC = () => {
 
     const infoList = (img: string, title: string, text: string) => {
         return (
