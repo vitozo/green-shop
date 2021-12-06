@@ -1,0 +1,40 @@
+.contacts{
+    display: flex;
+    align-items: center;
+    background: rgba(70, 163, 88, 0.1);
+    height: 88px;
+    border-bottom: 1px solid #D7E9DA;
+    border-top: 1px solid #D7E9DA;
+}
+
+.contacts__logo{
+    padding-left: 23px;
+}
+
+.contacts__сolumns{
+    display: flex;
+    width: 65%;
+    margin-left: 6%;
+}
+
+
+
+.contacts__сolumns__item{
+    display: flex;
+    align-items: center;
+}
+
+.contacts__сolumns__item__2{
+    margin-left: 8%;
+}
+
+.contacts__сolumns__item__3{
+    margin-left: 8%;
+}
+
+.contacts__сolumns__item__text{
+    margin-left: 9px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D3D3D;
+}

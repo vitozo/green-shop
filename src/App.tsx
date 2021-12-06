@@ -3,6 +3,7 @@ import s from "./App.module.css"
 import Header from "./Components/Header/Heder";
 import Footer from "./Components/Footer/Footer";
 import InfoForm from "./Components/InfoForm/InfoForm";
+import Contacts from "./components/Contacts/Contacts";
 
 
 
@@ -11,7 +12,10 @@ const App:React.FC = () => {
     <div className={s.container}>
       <Header/>
         <InfoForm />
+        <Contacts/>
         <Footer/>
+
+
     </div>
   );
 }
