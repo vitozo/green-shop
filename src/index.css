@@ -38,6 +38,14 @@ body {
   font-family: 'cera-pro';
 }
 
+body{
+  font-family: 'cera-pro', sens-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.42;
+  color: #3D3D3D;
+}
+
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul,
 ol {

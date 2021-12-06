@@ -25,6 +25,12 @@
     font-weight: normal;
 }
 
+.header__item_link:hover{
+    font-weight: bold;
+    border-bottom: 3px solid #46A358;
+    padding-bottom: 27px;
+}
+
 .header__actions{
     display: flex;
     align-items: center;
@@ -46,6 +52,10 @@
     color: #fff;
     padding: 10px 18px;
     text-decoration: none;
+    font-weight: 500;
+}
+.header__login:hover{
+    text-decoration: underline;
 }
 
 .header__login img{

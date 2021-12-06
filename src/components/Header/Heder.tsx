@@ -1,5 +1,5 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 import s from './css/Header.module.css';
 
 import headerLogo from "../../images/icons/header-logo.svg";
@@ -7,7 +7,18 @@ import headerSearch from "../../images/icons/header-search.svg";
 import headerCart from "../../images/icons/header-cart.svg";
 import headerLogin from "../../images/icons/header-login.svg";
 
+
 const Header: React.FC = (props) => {
+    const headerNavGenerator = (item: string) => {
+        return (
+            <li className={s.header__item}>
+                <NavLink to={''} className={s.header__item_link}>
+                    {item}
+                </NavLink>
+            </li>
+        )
+    };
+
     return (
         <div className={s.header}>
             <NavLink to={''} className={s.header__logo}>
@@ -15,26 +26,10 @@ const Header: React.FC = (props) => {
             </NavLink>
             <nav className={s.header__nav}>
                 <ul className={s.header__list}>
-                    <li className={s.header__item}>
-                        <NavLink to={''} className={s.header__item_link}>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li className={s.header__item}>
-                        <NavLink to={''} className={s.header__item_link}>
-                            Shop
-                        </NavLink>
-                    </li>
-                    <li className={s.header__item}>
-                        <NavLink to={''} className={s.header__item_link}>
-                            Plant Care
-                        </NavLink>
-                    </li>
-                    <li className={s.header__item}>
-                        <NavLink to={''} className={s.header__item_link}>
-                            Blogs
-                        </NavLink>
-                    </li>
+                    {headerNavGenerator('Home')}
+                    {headerNavGenerator('Shop')}
+                    {headerNavGenerator('Plant Care')}
+                    {headerNavGenerator('Blogs')}
                 </ul>
             </nav>
             <div className={s.header__actions}>
@@ -51,6 +46,6 @@ const Header: React.FC = (props) => {
             </div>
         </div>
     )
-}
+};
 
 export default Header
