@@ -5,6 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 
+//Mock_server
+import {makeServer} from "./mock_server_greenShop/server";
+if (process.env.NODE_ENV === "development") {
+    makeServer({ environment: "development" })
+}
+
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>

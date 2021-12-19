@@ -8,7 +8,6 @@ import InstagramIcon from "../../images/icons/Instagram-footer.svg"
 import LinkedinIcon from "../../images/icons/Linkedin-footer.svg"
 import TwitterIcon from "../../images/icons/Twitter-footer.svg"
 import UnionIcon from "../../images/icons/Union-footer.svg"
-
 import PaymentSystemsIcon from "../../images/icons/Payment-systems.svg"
 
 const Footer: React.FC = (props) => {
