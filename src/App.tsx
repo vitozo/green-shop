@@ -7,16 +7,7 @@ import Contacts from "./components/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import {authApi} from "./dal/api";
 
-
-
 const App: React.FC = () => {
-
-       const setProfileThunk = () => async () => {
-        const responseProfile = await authApi.logout()
-           console.log(responseProfile)
-    }
-    setProfileThunk()
-    console.log(authApi.logout())
     return (
         <div className={s.container}>
             <Header/>
