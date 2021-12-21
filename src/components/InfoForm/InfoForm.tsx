@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './css/InfoForm.module.css';
 import infoform1 from '../../images/content/infologo1.png';
 import infoform2 from '../../images/content/infologo2.png';
 import infoform3 from '../../images/content/infologo3.png';
+import {dataFlowersThunk} from "../../redux/reducers/flowers-reducer";
 
 
 const InfoForm: React.FC = () => {
-
     const infoList = (img: string, title: string, text: string) => {
         return (
             <li className={s.item}>
@@ -23,7 +23,11 @@ const InfoForm: React.FC = () => {
                 </div>
             </li>
         )
-    }
+    };
+
+    useEffect(() => {
+        dataFlowersThunk();
+    });
 
     return (
         <div className={s.content}>
@@ -39,7 +43,8 @@ const InfoForm: React.FC = () => {
                 <form className={s.form__elem}>
                     <div className={s.form__input}>
                         <div className={s.form__input_element}>
-                            <input type="email" className={s.form__input_elem} placeholder="enter your email address..."/>
+                            <input type="email" className={s.form__input_elem}
+                                   placeholder="enter your email address..."/>
                         </div>
                         <div className={s.form__button}>
                             <button className={s.btn}>
