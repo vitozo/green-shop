@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import {BrowserRouter} from "react-router-dom";
+import store from "./redux/store.ts"
 
 //Mock_server
 import {makeServer} from "./mock_server_greenShop/server";
+import {Provider} from "react-redux";
 if (process.env.NODE_ENV === "development") {
     makeServer({ environment: "development" })
 }
@@ -14,7 +18,9 @@ if (process.env.NODE_ENV === "development") {
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
+            <Provider store = {store}>
             <App/>
+            </Provider>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')

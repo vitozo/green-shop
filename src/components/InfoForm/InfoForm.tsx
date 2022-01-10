@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import s from './css/InfoForm.module.css';
 import infoform1 from '../../images/content/infologo1.png';
 import infoform2 from '../../images/content/infologo2.png';
 import infoform3 from '../../images/content/infologo3.png';
-import {dataFlowersThunk} from "../../redux/reducers/flowers-reducer";
+
 
 
 const InfoForm: React.FC = () => {
@@ -24,10 +24,6 @@ const InfoForm: React.FC = () => {
             </li>
         )
     };
-
-    useEffect(() => {
-        dataFlowersThunk();
-    });
 
     return (
         <div className={s.content}>
