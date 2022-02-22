@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import ContainerFlowers from "./components/DirectoryFlowers/ContainerFlowers";
 import MainBanner from "./components/MainBanner/MainBanner";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./slick-theme.css";
 
 
 

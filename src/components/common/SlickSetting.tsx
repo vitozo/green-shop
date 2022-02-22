@@ -10,7 +10,8 @@ const SlickSetting = () => {
         arrows: false,
         dots: true,
         slideToScroll: 1,
-        slidesToShow: 1
+        slidesToShow: 1,
+        autoplaySpeed: 500
     };
     return (
         <Slider {...settings}>
