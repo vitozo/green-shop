@@ -9,14 +9,14 @@ import headerLogin from "../../images/icons/header-login.svg";
 
 
 const Header: React.FC = (props) => {
-    const headerNavGenerator = (item: string) => {
-        return (
-            <li className={s.header__item}>
-                <NavLink to={''} className={s.header__item_link}>
-                    {item}
-                </NavLink>
-            </li>
-        )
+    const arrHeaderName: Array<string> = ['Home', 'Shop', 'Plant Care', 'Blogs'];
+
+    const headerNavGenerator = (item: Array<string>) => {
+        return item.map(i => (<li className={s.header__item}>
+            <NavLink to={''} className={s.header__item_link}>
+                {i}
+            </NavLink>
+        </li>))
     };
 
     return (
@@ -26,10 +26,7 @@ const Header: React.FC = (props) => {
             </NavLink>
             <nav className={s.header__nav}>
                 <ul className={s.header__list}>
-                    {headerNavGenerator('Home')}
-                    {headerNavGenerator('Shop')}
-                    {headerNavGenerator('Plant Care')}
-                    {headerNavGenerator('Blogs')}
+                    {headerNavGenerator(arrHeaderName)}
                 </ul>
             </nav>
             <div className={s.header__actions}>

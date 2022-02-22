@@ -11,7 +11,6 @@ const defaultState = {
 }
 
 
-
 type DefaultStateType = typeof defaultState
 
 const flowersReducer = (state = defaultState, action: ActionsType): DefaultStateType => {

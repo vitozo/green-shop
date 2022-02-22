@@ -1,36 +1,17 @@
-import {connect} from "react-redux";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../redux/store";
 import {getDataFlowersThunk} from "../../redux/reducers/flowers-reducer";
-import {flowersType} from "../../commonTypes/commonTypes";
-import React, {useEffect} from "react";
 
-type PropsType = {
-    flowers: Array<flowersType>
-    getDataFlowersThunk: () => void
-}
+const ContainerFlowers = () => {
+    const flowers = useSelector( (state: AppStateType) => state.flowersCatalog.flowers);
 
-const ContainerFlowers: React.FC<PropsType> = ({flowers, getDataFlowersThunk}) => {
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        getDataFlowersThunk()
-    }, [!flowers])
+    // useEffect(() => {dispatch(getDataFlowersThunk())}, []);
 
     return <div>
         {flowers.map(i => (<img src={i.photo}/>))}
     </div>
 }
-
-type mapStateToPropsType = {
-    flowers: Array<flowersType>
-}
-
-type mapDispatchToPropsType = {
-    getDataFlowersThunk: () => void
-}
-
-let mapStateToProps = (state: AppStateType): mapStateToPropsType => ({
-    flowers: state.flowersCatalog.flowers
-})
-
-
-export default connect<mapStateToPropsType, mapDispatchToPropsType, unknown, AppStateType>(mapStateToProps, {getDataFlowersThunk})(ContainerFlowers)
+ export default React.memo(ContainerFlowers);
